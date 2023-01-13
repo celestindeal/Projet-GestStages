@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                    ~{::title},
+                                                    ~{:: #stagieire-static-resources},
+                                                    ~{:: #stagieire-header},
+                                                    ~{:: #stagieire-nav},
+                                                    ~{:: #stagieire-main-content},
+                                                    ~{:: #stagieire-footer}
+                                                    )}">
+<head>
+  <title>Title of Products Page</title>
+</head>
+<body>
+<div id="stagieire-nav" th:replace="~{/fragments/app-fragments ::nav-default}">
+  Nav
+</div>
+<div id="stagieire-main-content">
+  <h2>stagieire</h2>
+  <p>Samsung</p>
+  <p>iPhone</p>
+  <p>Nokia</p>
+</div>
+</body>
+</html>
