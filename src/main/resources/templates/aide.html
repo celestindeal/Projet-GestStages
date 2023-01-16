@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                    ~{::title},
+                                                    ~{:: #aide-static-resources},
+                                                    ~{:: #aide-header},
+                                                    ~{:: #aide-nav},
+                                                    ~{:: #aide-main-content},
+                                                    ~{:: #aide-footer}
+                                                    )}">
+<head>
+  <title>Title of AIde Page</title>
+</head>
+<body>
+<div id="aide-nav" th:replace="~{/fragments/app-fragments ::nav-default}"></div>
+<div id="aide-main-content">
+  <h2>Product</h2>
+  <p>Samsung</p>
+  <p>iPhone</p>
+  <p>Nokia</p>
+</div>
+</body>
+</html>
