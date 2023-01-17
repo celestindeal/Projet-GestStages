@@ -9,12 +9,41 @@
                                                     ~{:: #entreprise-footer}
                                                     )}">
 <head>
-  <title>Title of entreprise Page</title>
+  <title>Entreprise</title>
 </head>
 <body>
 <div id="nav" th:replace="~{/fragments/app-fragments ::nav-default}"></div>
 <div id="entreprise-main-content" class="corps">
-  <h2>entreprise</h2>
+  <table class="table table-striped">
+    <thead class="thead-dark text-center">
+    <tr >
+      <th scope="col" style="width: 10%">Opération</th>
+      <th scope="col" style="width: 33%">Entreprise</th>
+      <th scope="col" style="width: 10%">Responsable</th>
+      <th scope="col" style="width: 32%">Adresse</th>
+      <th scope="col" style="width: 5%">Site</th>
+      <th scope="col" style="width: 10%">Spécialité</th>
+    </tr>
+    </thead>
+
+    <tbody class="text-center">
+      <tr th:each="entreprise : ${entreprises}">
+        <td scope="col">
+          <a th:href="@{/}"><i class="fa-solid fa-eye"></i></a>
+          <a th:href="@{/}"><i class="fa-solid fa-handshake"></i></a>
+        </td>
+        <td scope="col" th:text="${entreprise.raisonSociale}"></td>
+        <td scope="col" th:text="${entreprise.nomResp}"></td>
+        <td scope="col" data-th-text="${ entreprise.rueEntreprise + entreprise.cpEntreprise +entreprise.villeEntreprise}"></td>
+        <td scope="col"> <a th:href="${entreprise.siteEntreprise}" ><i class="fa-solid fa-link"></i></a> </td>
+        <td scope="col">
+          <ul th:each="spe : ${entreprise.specialites}">
+            <p th:text="${spe.libelle}"></p>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </body>
 </html>
