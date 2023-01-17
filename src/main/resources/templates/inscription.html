@@ -4,7 +4,7 @@
                                                     ~{::title},
                                                     ~{:: #inscription-static-resources},
                                                     ~{:: #inscription-header},
-                                                    ~{:: #inscription-nav},
+                                                    ~{:: #nav},
                                                     ~{:: #inscription-main-content},
                                                     ~{:: #inscription-footer}
                                                     )}">
@@ -12,14 +12,9 @@
     <title>Title of inscription Page</title>
 </head>
 <body>
-<div id="inscription-nav" th:replace="~{/fragments/app-fragments ::nav-default}">
-    Nav
-</div>
-<div id="inscription-main-content">
-    <h2>inscription</h2>
-    <p>Samsung</p>
-    <p>iPhone</p>
-    <p>Nokia</p>
+<div id="nav" th:replace="~{/fragments/app-fragments ::nav-default}"></div>
+<div id="inscription-main-content" class="corps">
+    <h2> inscription inscriptioninscriptioninscription inscription</h2>
 </div>
 </body>
 </html>

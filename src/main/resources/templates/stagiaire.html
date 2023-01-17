@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org"
       th:replace="~{layouts/main-layout :: main-fragment(
                                                     ~{::title},
-                                                    ~{:: #aide-static-resources},
-                                                    ~{:: #aide-header},
+                                                    ~{:: #stagiaire-static-resources},
+                                                    ~{:: #stagiaire-header},
                                                     ~{:: #nav},
-                                                    ~{:: #aide-main-content},
-                                                    ~{:: #aide-footer}
+                                                    ~{:: #stagiaire-main-content},
+                                                    ~{:: #stagiaire-footer}
                                                     )}">
 <head>
-  <title>Title of AIde Page</title>
+  <title>Title of Products Page</title>
 </head>
 <body>
 <div id="nav" th:replace="~{/fragments/app-fragments ::nav-default}"></div>
-<div id="aide-main-content" class="corps">
-  <h2>Product</h2>
+<div id="stagiaire-main-content" class="corps">
+  <h2>stagiaire</h2>
   <p>Samsung</p>
   <p>iPhone</p>
   <p>Nokia</p>
