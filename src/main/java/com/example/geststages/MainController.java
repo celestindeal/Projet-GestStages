@@ -23,9 +23,4 @@ public class MainController {
     public String aide() {
         return "aide";
     }
-
-    @RequestMapping("/entreprise")
-    public String entreprise() {
-        return "entreprise";
-    }
 }
