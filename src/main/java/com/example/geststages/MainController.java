@@ -9,13 +9,13 @@ public class MainController {
         return "home";
     }
 
-    @RequestMapping("/stagieire")
-    public String products() {
-        return "stagieire";
+    @RequestMapping("/stagiaire")
+    public String stagiaire() {
+        return "stagiaire";
     }
 
     @RequestMapping("/inscription")
-    public String about() {
+    public String inscription() {
         return "inscription";
     }
 

@@ -4,7 +4,7 @@
                                                     ~{::title},
                                                     ~{:: #entreprise-static-resources},
                                                     ~{:: #entreprise-header},
-                                                    ~{:: #entreprise-nav},
+                                                    ~{:: #nav},
                                                     ~{:: #entreprise-main-content},
                                                     ~{:: #entreprise-footer}
                                                     )}">
@@ -12,14 +12,9 @@
   <title>Title of entreprise Page</title>
 </head>
 <body>
-<div id="entreprise-nav" th:replace="~{/fragments/app-fragments ::nav-default}">
-  Nav
-</div>
-<div id="entreprise-main-content">
+<div id="nav" th:replace="~{/fragments/app-fragments ::nav-default}"></div>
+<div id="entreprise-main-content" class="corps">
   <h2>entreprise</h2>
-  <p>Samsung</p>
-  <p>iPhone</p>
-  <p>Nokia</p>
 </div>
 </body>
 </html>

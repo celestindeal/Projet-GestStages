@@ -4,21 +4,19 @@
   <meta charset="UTF-8" />
   <title>App Fragments</title>
 </head>
-<body>
-  <ul th:fragment = "nav-default">
-    <li><a th:href="@{/}">Home</a></li>
-    <li><a th:href="@{/entreprise}">Entreprise</a></li>
-    <li><a th:href="@{/stagieire}">Stagieire</a></li>
-    <li><a th:href="@{/inscription}">inscription</a></li>
-    <li><a th:href="@{/aide}">Aide</a></li>
-  </ul>
-  <ul th:fragment = "nav-admin">
-    <li><a th:href="@{/admin/products}">Product
-      Management</a></li>
-    <li><a th:href="@{/admin/orders}">Order Management</a></li>
-  </ul>
-  <div th:fragment="copyright">
-    &copy; epul.org-2022
-  </div>
+
+<body th:fragment = "nav-default" >
+
+        <a th:href="@{/}"><i class="fa-solid fa-house"></i> Accueil </a>
+        <a th:href="@{/entreprise}"><i class="fa-solid fa-building"></i> Entreprise </a>
+        <a th:href="@{/stagiaire}"><i class="fa-solid fa-person"></i> Stagiaire </a>
+        <a th:href="@{/inscription}"><i class="fa-solid fa-handshake-angle"></i> Inscription </a>
+        <a th:href="@{/aide}"><i class="fa-sharp fa-solid fa-circle-info"></i> Aide </a>
+    <div class="bottom">
+        <a ><i class="fa-sharp fa-solid fa-arrow-right-from-line"></i> Développer </a>
+        <a ><i class="fa-sharp fa-solid fa-arrow-left-from-line"></i> Réduire </a>
+    </div>
+
+
 </body>
 </html>
