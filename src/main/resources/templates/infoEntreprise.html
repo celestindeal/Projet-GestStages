@@ -18,77 +18,108 @@
 
     <div class="form-body">
       <div class="row">
-        <div class="form-holder">
-          <div class="form-content">
-            <div class="form-items">
 
               <form class="requires-validation" novalidate>
                 <h3>Information</h3>
-                <div>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Nom de l'entreprise</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.raisonSociale}" type="text" name="name-entreprise" placeholder="Nom de l'entreprise" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 ">Nom du contact</li>
-                    <li class="list-group-item w-75 p-3"><input class="form-control" th:value="${entreprise.nomContact}" type="text" name="name-entreprise" placeholder="Nom du contact" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 ">Nom du responsable</li>
-                    <li class="list-group-item w-75 p-3"><input class="form-control" th:value="${entreprise.nomResp}" type="text" name="name-entreprise" placeholder="Nom du responsable" required></li>
-                  </ul>
-                </div>
+
+                  <div class="col-md-10 mb-3">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend w-25">
+                        <span class="input-group-text ">Nom de l'entreprise</span>
+                      </div>
+                      <input th:value="${entreprise.raisonSociale}" type="text" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend w-25">
+                        <span class="input-group-text ">Nom du contact</span>
+                      </div>
+                      <input th:value="${entreprise.nomContact}" type="text" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend w-25">
+                        <span class="input-group-text ">Nom du responsable</span>
+                      </div>
+                      <input th:value="${entreprise.nomResp}" type="text" class="form-control">
+                    </div>
+                  </div>
+
 
                 <h3>Contact</h3>
-                <div>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Rue</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.rueEntreprise}" type="text" name="name-entreprise" placeholder="Rue" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Code postale</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.cpEntreprise}" type="text" name="name-contact" placeholder="Code postale" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Ville</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.villeEntreprise}" type="text" name="name-responsable" placeholder="Ville" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Téléphone</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.telEntreprise}" type="text" name="name-contact" placeholder="Téléphone" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Fax</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.faxEntreprise}" type="text" name="name-responsable" placeholder="Fax" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Email</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.email}" type="text" name="name-contact" placeholder="Email" required></li>
-                  </ul>
+
+                <div class="col-md-10 mb-3">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Rue</span>
+                    </div>
+                    <input th:value="${entreprise.rueEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Code postale</span>
+                    </div>
+                    <input th:value="${entreprise.cpEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Ville</span>
+                    </div>
+                    <input th:value="${entreprise.villeEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Téléphone</span>
+                    </div>
+                    <input th:value="${entreprise.telEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Fax</span>
+                    </div>
+                    <input th:value="${entreprise.faxEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Email</span>
+                    </div>
+                    <input th:value="${entreprise.email}" type="text" class="form-control">
+                  </div>
                 </div>
 
                 <h3>Divers</h3>
-                <div>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Observation</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.observation}" type="text" name="name-contact" placeholder="Observation" required></li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item w-25 "> <p>Url du site</p> </li>
-                  <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.siteEntreprise}" type="text" name="name-contact" placeholder="Url du site" required></li>
-                </ul>
-                  <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item w-25 "> <p>Niveau</p> </li>
-                  <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.niveau}" type="text" name="name-contact" placeholder="Niveau" required></li>
-                </ul>
+
+                <div class="col-md-10 mb-3">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Observation</span>
+                    </div>
+                    <input th:value="${entreprise.observation}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Url du site</span>
+                    </div>
+                    <input th:value="${entreprise.siteEntreprise}" type="text" class="form-control">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Niveau</span>
+                    </div>
+                    <input th:value="${entreprise.niveau}" type="text" class="form-control">
+                  </div>
                 </div>
 
-                <h3>Spécialité</h3>
-                <div>
-                  <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25 "> <p>Spécialité</p> </li>
-                    <li class="list-group-item  w-75 p-3"><input class="form-control" th:value="${entreprise.specialites}" type="text" name="name-contact" placeholder="Spécialité" required></li>
-                  </ul>
+                <h3 class="">Spécialité</h3>
+
+
+                <div class="col-md-10 mb-3">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend w-25">
+                      <span class="input-group-text ">Spécialité</span>
+                    </div>
+
+                    <input th:value="${entreprise.specialites}" type="text" class="form-control">
+
+                  </div>
                 </div>
 
                 <div class="form-button mt-3">
@@ -96,9 +127,6 @@
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </body>
