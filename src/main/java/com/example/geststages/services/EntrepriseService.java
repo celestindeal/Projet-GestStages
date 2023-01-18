@@ -19,4 +19,10 @@ public class EntrepriseService {
 
         return entrepriseList;
     }
+
+    public Entreprise get(Integer id) {
+        Entreprise entreprise = entrepriseRepository.findById(id).get();
+
+        return entreprise;
+    }
 }

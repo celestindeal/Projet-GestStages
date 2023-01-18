@@ -29,7 +29,7 @@
     <tbody class="text-center">
       <tr th:each="entreprise : ${entreprises}">
         <td scope="col">
-          <a th:href="@{/}"><i class="fa-solid fa-eye"></i></a>
+          <a th:href="@{'/entreprise/' + ${entreprise.id}}"><i class="fa-solid fa-eye"></i></a>
           <a th:href="@{/}"><i class="fa-solid fa-handshake"></i></a>
         </td>
         <td scope="col" th:text="${entreprise.raisonSociale}"></td>
