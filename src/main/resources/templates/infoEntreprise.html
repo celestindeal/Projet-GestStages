@@ -19,7 +19,7 @@
     <div class="form-body">
       <div class="row">
 
-              <form class="requires-validation" novalidate>
+              <form class="requires-validation" th:action="@{/entreprise}" method="post" th:object="${entreprise}" novalidate>
                 <h3>Information</h3>
 
                   <div class="col-md-10 mb-3">
@@ -27,19 +27,19 @@
                       <div class="input-group-prepend w-25">
                         <span class="input-group-text ">Nom de l'entreprise</span>
                       </div>
-                      <input th:value="${entreprise.raisonSociale}" type="text" class="form-control">
+                      <input th:field="*{raisonSociale}" type="text" name="raisonSociale" class="form-control">
                     </div>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend w-25">
                         <span class="input-group-text ">Nom du contact</span>
                       </div>
-                      <input th:value="${entreprise.nomContact}" type="text" class="form-control">
+                      <input th:field="*{nomContact}" type="text" name="nomContact" class="form-control">
                     </div>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend w-25">
                         <span class="input-group-text ">Nom du responsable</span>
                       </div>
-                      <input th:value="${entreprise.nomResp}" type="text" class="form-control">
+                      <input th:field="*{nomResp}" type="text" name="nomResp" class="form-control">
                     </div>
                   </div>
 
@@ -51,37 +51,37 @@
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Rue</span>
                     </div>
-                    <input th:value="${entreprise.rueEntreprise}" type="text" class="form-control">
+                    <input th:field="*{rueEntreprise}" type="text" name="rueEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Code postale</span>
                     </div>
-                    <input th:value="${entreprise.cpEntreprise}" type="text" class="form-control">
+                    <input th:field="*{cpEntreprise}" type="text" name="cpEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Ville</span>
                     </div>
-                    <input th:value="${entreprise.villeEntreprise}" type="text" class="form-control">
+                    <input th:field="*{villeEntreprise}" type="text" name="villeEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Téléphone</span>
                     </div>
-                    <input th:value="${entreprise.telEntreprise}" type="text" class="form-control">
+                    <input th:field="*{telEntreprise}" type="text" name="telEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Fax</span>
                     </div>
-                    <input th:value="${entreprise.faxEntreprise}" type="text" class="form-control">
+                    <input th:field="*{faxEntreprise}" type="text" name="faxEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Email</span>
                     </div>
-                    <input th:value="${entreprise.email}" type="text" class="form-control">
+                    <input th:field="*{email}" type="text" name="email" class="form-control">
                   </div>
                 </div>
 
@@ -92,19 +92,19 @@
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Observation</span>
                     </div>
-                    <input th:value="${entreprise.observation}" type="text" class="form-control">
+                    <input th:field="*{observation}" type="text" name="observation" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Url du site</span>
                     </div>
-                    <input th:value="${entreprise.siteEntreprise}" type="text" class="form-control">
+                    <input th:field="*{siteEntreprise}" type="text" name="siteEntreprise" class="form-control">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Niveau</span>
                     </div>
-                    <input th:value="${entreprise.niveau}" type="text" class="form-control">
+                    <input th:field="*{niveau}" type="text" name="niveau" class="form-control">
                   </div>
                 </div>
 
@@ -116,8 +116,12 @@
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Spécialité</span>
                     </div>
-
-                    <input th:value="${entreprise.specialites}" type="text" class="form-control">
+                    <select class="form-control" th:field="*{specialites}" multiple="multiple" >
+                      <option th:each="part : ${specialites}"
+                      th:field="*{part.libelle}"
+                      th:text="${part.libelle}">
+                      </option>
+                    </select>
 
                   </div>
                 </div>
