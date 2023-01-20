@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Controller
-public class InfoEntrepriseController {
+public class modifEntrepriseController {
     private final EntrepriseService entrepriseService;
 
-    public InfoEntrepriseController(EntrepriseService entrepriseService) {
+    public modifEntrepriseController(EntrepriseService entrepriseService) {
         this.entrepriseService = entrepriseService;
     }
 
-    @GetMapping("/entreprise/{id}")
+    @GetMapping("/modifEntreprise/{id}")
     public String entreprise(ModelMap model, @PathVariable int id) {
         System.out.println("id = " + id);
         Entreprise entreprise = entrepriseService.get(id);
 
         model.addAttribute("entreprise", entreprise);
-        return "infoEntreprise";
+        return "modifEntreprise";
     }
 
-    @PostMapping("/entreprise")
+    @PostMapping("/modifEntreprise")
     public String greetingSubmit(@ModelAttribute Entreprise entreprise, Model model) {
         model.addAttribute("entreprise", entreprise);
         System.out.println("entreprise = " + entreprise);
