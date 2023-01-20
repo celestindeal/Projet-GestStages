@@ -116,11 +116,12 @@
                     <div class="input-group-prepend w-25">
                       <span class="input-group-text ">Spécialité</span>
                     </div>
-                    <select class="form-control" th:field="*{specialites}" multiple="multiple" >
-                      <option th:each="part : ${specialites}"
-                      th:field="*{part.libelle}"
-                      th:text="${part.libelle}">
-                      </option>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Les Spécialités</option>
+                      <option value="SLAM">SLAM</option>
+                      <option value="SISR">SISR</option>
+                      <option value="AM">AM</option>
+                      <option value="SN">SN</option>
                     </select>
 
                   </div>
