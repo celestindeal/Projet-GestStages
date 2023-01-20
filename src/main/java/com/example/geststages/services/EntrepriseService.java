@@ -19,4 +19,8 @@ public class EntrepriseService {
 
         return entrepriseList;
     }
+
+    public void add(Entreprise entreprise) {
+        entrepriseRepository.save(entreprise);
+    }
 }
